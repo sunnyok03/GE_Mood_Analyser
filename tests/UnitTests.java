@@ -9,4 +9,10 @@ public class UnitTests {
         MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
         assertEquals("SAD",moodAnalyzer.analyzeMood("I am sad"));
     }
+
+    @Test
+    public void analyzeHappyMood(){
+        MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
+        assertEquals("HAPPY",moodAnalyzer.analyzeMood("I am happy"));
+    }
 }
