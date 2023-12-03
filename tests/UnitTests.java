@@ -12,7 +12,7 @@ public class UnitTests {
 
     @Test
     public void analyzeHappyMood(){
-        MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-        assertEquals("HAPPY",moodAnalyzer.analyzeMood("I am happy"));
+        MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I am happy");
+        assertEquals("HAPPY",moodAnalyzer.analyzeMood());
     }
 }
