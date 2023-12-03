@@ -6,8 +6,8 @@ import static org.junit.Assert.*;
 public class UnitTests {
     @Test
     public void analyzeSadMood(){
-        MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-        assertEquals("SAD",moodAnalyzer.analyzeMood("I am sad"));
+        MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I am sad");
+        assertEquals("SAD",moodAnalyzer.analyzeMood());
     }
 
     @Test
