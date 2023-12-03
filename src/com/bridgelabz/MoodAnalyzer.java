@@ -23,11 +23,16 @@ public class MoodAnalyzer {
     @return: String indicating "SAD" or "HAPPY" message
      */
     public String analyzeMood(){
-        message = message.toLowerCase();
-        if(message.contains("sad")){
-            return "SAD";
-        }else{
-            return "HAPPY";
+        try {
+            message = message.toLowerCase();
+            if (message.contains("sad")) {
+                return "SAD";
+            } else {
+                return "HAPPY";
+            }
+        }catch (NullPointerException e){
+            System.out.println("Null pointer exception !!");
+            return null;
         }
     }
 }
