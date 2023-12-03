@@ -32,7 +32,7 @@ public class MoodAnalyzer {
             }
         }catch (NullPointerException e){
             System.out.println("Null pointer exception !!");
-            return null;
+            return "HAPPY";
         }
     }
 }

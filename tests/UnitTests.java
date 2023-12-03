@@ -15,4 +15,10 @@ public class UnitTests {
         MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I am happy");
         assertEquals("HAPPY",moodAnalyzer.analyzeMood());
     }
+
+    @Test
+    public void analyzeNULLMood(){
+        MoodAnalyzer moodAnalyzer = new MoodAnalyzer(null);
+        assertEquals("HAPPY",moodAnalyzer.analyzeMood());
+    }
 }
