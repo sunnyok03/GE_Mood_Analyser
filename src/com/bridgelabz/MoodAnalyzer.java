@@ -22,17 +22,16 @@ public class MoodAnalyzer {
     @params:
     @return: String indicating "SAD" or "HAPPY" message
      */
-    public String analyzeMood(){
+    public String analyzeMood() throws MoodAnalysisException {
         try {
-            message = message.toLowerCase();
+            message = message.toLowerCase(); // throws error if null or empty
             if (message.contains("sad")) {
                 return "SAD";
             } else {
                 return "HAPPY";
             }
         }catch (NullPointerException e){
-            System.out.println("Null pointer exception !!");
-            return "HAPPY";
+            throw new MoodAnalysisException("NULL or empty String is passed.");
         }
     }
 }

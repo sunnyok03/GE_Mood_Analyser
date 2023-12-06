@@ -1,3 +1,4 @@
+import com.bridgelabz.MoodAnalysisException;
 import com.bridgelabz.MoodAnalyzer;
 import org.junit.Test;
 
@@ -5,20 +6,20 @@ import static org.junit.Assert.*;
 
 public class UnitTests {
     @Test
-    public void analyzeSadMood(){
+    public void analyzeSadMood() throws MoodAnalysisException {
         MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I am sad");
         assertEquals("SAD",moodAnalyzer.analyzeMood());
     }
 
     @Test
-    public void analyzeHappyMood(){
+    public void analyzeHappyMood() throws MoodAnalysisException {
         MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I am happy");
         assertEquals("HAPPY",moodAnalyzer.analyzeMood());
     }
 
-    @Test
-    public void analyzeNULLMood(){
+    @Test(expected = MoodAnalysisException.class)
+    public void analyzeNULLMood() throws MoodAnalysisException {
         MoodAnalyzer moodAnalyzer = new MoodAnalyzer(null);
-        assertEquals("HAPPY",moodAnalyzer.analyzeMood());
+        moodAnalyzer.analyzeMood();
     }
 }
